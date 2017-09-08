@@ -63,6 +63,16 @@ for sub=1:5
         cfg=[];
         cfg.demean ='yes';
         data_pre=ft_preprocessing(cfg,data_pre);
+        
+        % bandpass filter
+        cfg=[];
+        cfg.bpfreq = [0.5 40];
+        data_pre=ft_preprocessing(cfg,data_pre);
+        
+        % resample
+        cfg=[];
+        cfg.bpfreq = [0.5 40];
+        data_pre=ft_preprocessing(cfg,data_pre);
 %         bad_chan_label{1}='all';
 %         for b_c=1:length(data.bad_chan)
 %             bad_chan_label{b_c+1}=['-' data.data_after_ica.label{data.bad_chan(b_c)}];
