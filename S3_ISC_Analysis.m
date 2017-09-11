@@ -4,7 +4,7 @@
 p = pwd;
 group_number = 1 : 3;
 group_label = {'CAU','QH','Pro'};
-select_group = 1;
+select_group = 3;
 load(strcat(p,'/Group_data/EEG_data_resample_group',num2str(select_group)));
 
 %% initial data structure
@@ -44,7 +44,6 @@ for n = 1 :length(time_label)
             for ii = select_Game_number
                 for jj =select_Game_number
                     if jj > ii
-                        
                         % void or not
                         if ~isempty(data{ii}) && ~isempty(data{jj})
                             

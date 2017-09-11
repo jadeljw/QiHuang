@@ -57,10 +57,10 @@ for i=1:length(SubInfo)
         data_pre=ft_preprocessing(cfg,data_pre);
         
         
-        cfg=[];
-        cfg.bpfilter =[0.5 40];
-        data_pre=ft_preprocessing(cfg,data_pre);
-        
+%         cfg=[];
+%         cfg.bpfilter =[0.5 40];
+%         data_pre=ft_preprocessing(cfg,data_pre);
+%         
         %         % resample
         %         cfg = [];
         %         cfg.resamplefs = 50;
